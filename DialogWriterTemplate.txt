@@ -1,4 +1,7 @@
-|text>[]
+|text>[]|text>[]
+<div class="progressIndicator">
+	|indicator>[>]
+</div>
 
 <div style="display: none">
 	(set: _lines to (a:
@@ -10,6 +13,7 @@
 	(set: _i to 1)
 	(set: _char to 0)
 	(set: _done to false)
+	(set: _blink to true)
 
 	(after: 1s)[
 		(live: 10ms)[
@@ -41,8 +45,16 @@
 				]
 			]
 		]
+
+		(live: 0.5s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char >= _lines's _i's length and not _done and _blink)[>]
+				(else:)[]
+			]
+		]
 	]
-	
+
 	<script>
 		document.addEventListener("keydown", function (e) {
 			if (e.code === "Space") {

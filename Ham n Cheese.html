@@ -13,6 +13,12 @@
   box-shadow: none;
 }
 
+.progressIndicator {
+  position: fixed;
+  right: 100px;
+  bottom: 25px;
+}
+
 tw-passage {
   padding: 50px;
   background-color: #000000af;
@@ -36,6 +42,9 @@ tw-story
 tw-story[tags~="Intro"] {
  background-image:url("assets/office.jpg");
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Intro" color="green"></tw-tag><tw-passagedata pid="1" name="Description" tags="Intro" position="900,400" size="100,100">|text&gt;[]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
 
 &lt;div style=&quot;display: none&quot;&gt;
 	(set: _lines to (a:
@@ -61,6 +70,7 @@ tw-story[tags~="Intro"] {
 	(set: _i to 1)
 	(set: _char to 0)
 	(set: _done to false)
+	(set: _blink to false)
 
 	(after: 1s)[
 		(live: 10ms)[
@@ -90,6 +100,14 @@ tw-story[tags~="Intro"] {
 						(set: _done to true)
 					]
 				]
+			]
+		]
+
+		(live: 0.5s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[▶]
+				(else:)[]
 			]
 		]
 	]

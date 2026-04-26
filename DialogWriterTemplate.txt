@@ -1,0 +1,58 @@
+|text>[]
+
+<div style="display: none">
+	(set: _lines to (a:
+	"Line 1",
+	"Line 2",
+	"Line 3"
+	))
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+
+	(after: 1s)[
+		(live: 10ms)[
+			_done[(stop:)]
+			(if: _char < _lines's _i's length)[
+				(set: _char to it + 1)
+				(append: ?text)[(print: _lines's _i's _char)]
+			]
+			(else:)[
+				(replace: ?text)[(print: _lines's _i)]
+			]
+		]
+
+		(if: not _done)[
+			(click-rerun: ?passage)[
+				(if: _char < _lines's _i's length)[
+					(set: _char to _lines's _i's length)
+					(replace: ?text)[(print: _lines's _i)]
+				]
+				(else:)[
+					(if: _i < _lines's length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+					(else:)[
+						(set: _done to true)
+					]
+				]
+			]
+		]
+	]
+	
+	<script>
+		document.addEventListener("keydown", function (e) {
+			if (e.code === "Space") {
+				e.preventDefault();
+
+				const clickable = document.querySelector(".enchantment-clickblock");
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		})
+	</script>
+</div>

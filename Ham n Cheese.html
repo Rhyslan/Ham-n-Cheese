@@ -9,7 +9,148 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Ham n Cheese.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Ham n Cheese" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="9DBEE8F8-2352-4BE1-8020-7AB25115AEBB" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Description" tags="" position="900,400" size="100,100">It was... delicious. The finest sandwich to ever grace the earth. Forged during the bread shortage of &#39;26, one slice was the end of a white loaf, the other was the bottom half of a burger bun from the week before. Both slices were spread with care with the finest quarter teaspoon of margarine from my kitchen. The cheese was half a slice of Kraft&#39;s finest dairy product, lovingly stacked. The meat, succulent and tender, was a paper-thin slice of devon, so thin one could read newsprint and stargaze through it. It smelt kinda funny. I tenderly packed it into a sandwich bag, brought it to the office, wrote my name on the sandwich instead of the bag by mistake, and placed into into the refrigerator to safeguard my culinary delight &#39;til lunch.</tw-passagedata></tw-storydata>
+<tw-storydata name="Ham n Cheese" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="9DBEE8F8-2352-4BE1-8020-7AB25115AEBB" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.enchantment-clickblock tw-passage::after {
+  box-shadow: none;
+}
+
+tw-passage {
+  padding: 50px;
+  background-color: #000000af;
+  border-radius: 20px;
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  height: 400px;
+  overflow: scroll;
+}
+
+tw-story
+{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+}
+
+tw-story[tags~="Intro"] {
+ background-image:url("assets/office.jpg");
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Intro" color="green"></tw-tag><tw-passagedata pid="1" name="Description" tags="Intro" position="900,400" size="100,100">|text&gt;[]
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to (a:
+	&quot;It was... delicious.&quot;,
+	&quot;The finest sandwich to ever grace the earth.&quot;,
+	&quot;Forged during the bread shortage of &#39;26, one slice was the end of a white loaf, the other was the bottom half of a burger bun from the week before.&quot;,
+	&quot;Both slices were spread with care with the finest quarter teaspoon of margarine from my kitchen.&quot;,
+	&quot;The cheese was half a slice of Kraft&#39;s finest dairy product, lovingly stacked.&quot;,
+	&quot;The meat, succulent and tender, was a paper-thin slice of devon, so thin one could read newsprint and stargaze through it.&quot;,
+	&quot;It smelt kinda funny.&quot;,
+	&quot;I tenderly packed it into a sandwich bag, brought it to the office, wrote my name on the sandwich instead of the bag by mistake, and placed into into the refrigerator to safeguard my culinary delight &#39;til lunch.&quot;,
+	&quot;So delicious, in fact, that a certain someone took it upon himself to ruin my day utterly and entirely.&quot;,
+	&quot;When lunchtime arrived, I strode triumphantly into the breakroom, pushed an utterly forgettable coworker of mine aside, and threw open the fridge door into another awaiting moron.&quot;,
+	&quot;Of course, there were several other lunches in front of where I had sequestered mine, so I took them and placed them gently into the bin, covering them with some paper towels.&quot;,
+	&quot;Alas, the sandwich, MY sandwich, was no longer there.&quot;,
+	&quot;I was distraught.&quot;,
+	&quot;And when I turned around, there he was, looking at me like I was worse than gum on his boot.&quot;,
+	&quot;&#39;&#39;SAMUEL&#39;&#39;&quot;,
+	&quot;Of course, this had meant he had STOLEN IT! Why else would he look at me like that?
+	[[A reasonable plan&lt;-There was only one thing to do]]&quot;
+	))
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+
+	(after: 1s)[
+		(live: 10ms)[
+			_done[(stop:)]
+			(if: _char &lt; _lines&#39;s _i&#39;s length)[
+				(set: _char to it + 1)
+				(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+			]
+			(else:)[
+				(replace: ?text)[(print: _lines&#39;s _i)]
+			]
+		]
+
+		(if: not _done)[
+			(click-rerun: ?passage)[
+				(if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+					(else:)[
+						(set: _done to true)
+					]
+				]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.enchantment-clickblock&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		})
+	&lt;/script&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="A reasonable plan" tags="" position="1100,400" size="100,100">|text&gt;[]
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to (a:
+	&quot;Line 1&quot;,
+	&quot;Line 2&quot;,
+	&quot;Line 3&quot;
+	))
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+
+	(after: 1s)[
+		(live: 10ms)[
+			_done[(stop:)]
+			(if: _char &lt; _lines&#39;s _i&#39;s length)[
+				(set: _char to it + 1)
+				(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+			]
+			(else:)[
+				(replace: ?text)[(print: _lines&#39;s _i)]
+			]
+		]
+
+		(if: not _done)[
+			(click-rerun: ?passage)[
+				(if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+					(else:)[
+						(set: _done to true)
+					]
+				]
+			]
+		]
+	]
+&lt;/div&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

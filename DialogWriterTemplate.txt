@@ -1,7 +1,11 @@
-|text>[]|text>[]
-<div class="progressIndicator">
-	|indicator>[>]
-</div>
+|dialogBox>[
+	<div class="dialogBox">
+		|text>[]
+	</div>
+	<div class="progressIndicator">
+		|indicator>[>]
+	</div>
+]
 
 <div style="display: none">
 	(set: _lines to (a:
@@ -16,7 +20,7 @@
 	(set: _blink to true)
 
 	(after: 1s)[
-		(live: 10ms)[
+		(live: 30ms)[
 			_done[(stop:)]
 			(if: _char < _lines's _i's length)[
 				(set: _char to it + 1)
@@ -28,7 +32,7 @@
 		]
 
 		(if: not _done)[
-			(click-rerun: ?passage)[
+			(click-rerun: ?dialogBox)[
 				(if: _char < _lines's _i's length)[
 					(set: _char to _lines's _i's length)
 					(replace: ?text)[(print: _lines's _i)]
@@ -60,7 +64,7 @@
 			if (e.code === "Space") {
 				e.preventDefault();
 
-				const clickable = document.querySelector(".enchantment-clickblock");
+				const clickable = document.querySelector(".dialogBox");
 				if (clickable) {
 					clickable.click();
 				}

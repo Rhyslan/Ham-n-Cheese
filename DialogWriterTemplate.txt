@@ -1,11 +1,13 @@
-|dialogBox>[
-	<div class="dialogBox">
-		|text>[]
-	</div>
-	<div class="progressIndicator">
-		|indicator>[>]
-	</div>
+|clickArea>[
+	|dialogBox>[
+		<div class="dialogBox">
+			|text>[]
+		</div>
+	]
 ]
+<div class="progressIndicator">
+	|indicator>[]
+</div>
 
 <div style="display: none">
 	(set: _lines to (a:
@@ -17,21 +19,30 @@
 	(set: _i to 1)
 	(set: _char to 0)
 	(set: _done to false)
-	(set: _blink to true)
+	(set: _blink to false)
 
 	(after: 1s)[
-		(live: 30ms)[
-			_done[(stop:)]
-			(if: _char < _lines's _i's length)[
-				(set: _char to it + 1)
-				(append: ?text)[(print: _lines's _i's _char)]
-			]
-			(else:)[
-				(replace: ?text)[(print: _lines's _i)]
-			]
-		]
-
 		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _char < _lines's _i's length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines's _i's _char)]
+				]
+				(else:)[
+					(if: _i is _lines's length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							<div class="dialogBox">
+								|text>[]
+							</div>
+						]
+					]
+					(replace: ?text)[(print: _lines's _i)]
+				]
+			]
+
+
 			(click-rerun: ?dialogBox)[
 				(if: _char < _lines's _i's length)[
 					(set: _char to _lines's _i's length)
@@ -43,22 +54,19 @@
 						(set: _char to 0)
 						(replace: ?text)[]
 					]
-					(else:)[
-						(set: _done to true)
-					]
 				]
 			]
 		]
 
-		(live: 0.5s)[
+		(live: 1s)[
 			(set: _blink to not _blink)
 			(replace: ?indicator)[
-				(if: _char >= _lines's _i's length and not _done and _blink)[>]
+				(if: _char >= _lines's _i's length and not _done and _blink)[⏺]
 				(else:)[]
 			]
 		]
 	]
-
+    
 	<script>
 		document.addEventListener("keydown", function (e) {
 			if (e.code === "Space") {

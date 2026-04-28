@@ -11,9 +11,9 @@
 
 <div style="display: none">
 	(set: _lines to (a:
-	"Line 1",
-	"Line 2",
-	"Line 3"
+		"Line 1",
+		"Line 2",
+		"Line 3"
 	))
 
 	(set: _i to 1)
@@ -25,7 +25,19 @@
 		(if: not _done)[
 			(live: 30ms)[
 				_done[(stop:)]
-				(if: _char < _lines's _i's length)[
+				(if: _lines's _i's length >= 2 and (_lines's _i's 1st + _lines's _i's 2st) is "[[")[
+					(if: _i is _lines's length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							<div class="dialogBox">
+								|text>[]
+							</div>
+						]
+					]
+					(set: _char to _lines's _i's length)
+					(replace: ?text)[(print: _lines's _i)]
+				]
+				(else-if: _char < _lines's _i's length)[
 					(set: _char to it + 1)
 					(append: ?text)[(print: _lines's _i's _char)]
 				]
@@ -44,7 +56,19 @@
 
 
 			(click-rerun: ?dialogBox)[
-				(if: _char < _lines's _i's length)[
+				(if: _lines's _i's length >= 2 and (_lines's _i's 1st + _lines's _i's 2st) is "[[")[
+					(if: _i is _lines's length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							<div class="dialogBox">
+								|text>[]
+							</div>
+						]
+					]
+					(replace: ?text)[(print: _lines's _i)]
+					(set: _char to _lines's _i's length)
+				]
+				(else-if: _char < _lines's _i's length)[
 					(set: _char to _lines's _i's length)
 					(replace: ?text)[(print: _lines's _i)]
 				]
@@ -68,6 +92,7 @@
 	]
     
 	<script>
+		document.title = "";
 		document.addEventListener("keydown", function (e) {
 			if (e.code === "Space") {
 				e.preventDefault();
@@ -77,6 +102,11 @@
 					clickable.click();
 				}
 			}
-		})
+		});
 	</script>
+	<style>
+		tw-story[tags~="Tag"] {
+		  background-image:url("assets/image.png");
+		}
+	</style>
 </div>

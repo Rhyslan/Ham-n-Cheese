@@ -10,10 +10,6 @@
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Ham n Cheese.</tw-noscript></noscript></tw-story>
 <tw-storydata name="Ham n Cheese" startnode="3" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="9DBEE8F8-2352-4BE1-8020-7AB25115AEBB" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Background images  */
-tw-story[tags~="Intro"] {
-  background-image:url("assets/office.jpg");
-}
-
 tw-story[tags~="Title"] {
   background-image:url("assets/Title BG.png");
 }
@@ -89,7 +85,7 @@ tw-sidebar tw-expression tw-icon {
 
 tw-story[tags~="Title"] tw-link {
   color: black;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Intro" color="green"></tw-tag><tw-tag name="Title" color="green"></tw-tag><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Intro" tags="Intro" position="600,300" size="100,100">|clickArea&gt;[
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Intro" color="green"></tw-tag><tw-tag name="Title" color="green"></tw-tag><tw-tag name="header" color="blue"></tw-tag><tw-tag name="discovTheft" color="green"></tw-tag><tw-tag name="DiscovTheft" color="green"></tw-tag><tw-tag name="ReasonPlan" color="green"></tw-tag><tw-tag name="TrainingArc" color="green"></tw-tag><tw-tag name="TrainBow" color="red"></tw-tag><tw-tag name="TrainSword" color="orange"></tw-tag><tw-tag name="TrainSpear" color="yellow"></tw-tag><tw-tag name="DoneMonks" color="green"></tw-tag><tw-tag name="BackToCity" color="green"></tw-tag><tw-passagedata pid="1" name="Discovery of sandwich theft" tags="DiscovTheft" position="400,300" size="100,100">|clickArea&gt;[
 	|dialogBox&gt;[
 		&lt;div class=&quot;dialogBox&quot;&gt;
 			|text&gt;[]
@@ -102,23 +98,23 @@ tw-story[tags~="Title"] tw-link {
 
 &lt;div style=&quot;display: none&quot;&gt;
 	(set: _lines to (a:
-	&quot;It was... delicious.&quot;,
-	&quot;The finest sandwich to ever grace the earth.&quot;,
-	&quot;Forged during the bread shortage of &#39;26, one slice was the end of a white loaf, the other was the bottom half of a burger bun from the week before.&quot;,
-	&quot;Both slices were spread with care with the finest quarter teaspoon of margarine from my kitchen.&quot;,
-	&quot;The cheese was half a slice of Kraft&#39;s finest dairy product, lovingly stacked.&quot;,
-	&quot;The meat, succulent and tender, was a paper-thin slice of devon, so thin one could read newsprint and stargaze through it.&quot;,
-	&quot;It smelt kinda funny.&quot;,
-	&quot;I tenderly packed it into a sandwich bag, brought it to the office, wrote my name on the sandwich instead of the bag by mistake, and placed into into the refrigerator to safeguard my culinary delight &#39;til lunch.&quot;,
-	&quot;So delicious, in fact, that a certain someone took it upon himself to ruin my day utterly and entirely.&quot;,
-	&quot;When lunchtime arrived, I strode triumphantly into the breakroom, pushed an utterly forgettable coworker of mine aside, and threw open the fridge door into another awaiting moron.&quot;,
-	&quot;Of course, there were several other lunches in front of where I had sequestered mine, so I took them and placed them gently into the bin, covering them with some paper towels.&quot;,
-	&quot;Alas, the sandwich, MY sandwich, was no longer there.&quot;,
-	&quot;I was distraught.&quot;,
-	&quot;And when I turned around, there he was, looking at me like I was worse than gum on his boot.&quot;,
-	&quot;&#39;&#39;SAMUEL&#39;&#39;&quot;,
-	&quot;Of course, this had meant he had STOLEN IT! Why else would he look at me like that?
-	[[A reasonable plan&lt;-There was only one thing to do]]&quot;
+				&quot;It was... delicious.&quot;,
+		&quot;The finest sandwich to ever grace the earth.&quot;,
+		&quot;Forged during the bread shortage of &#39;26, one slice was the end of a white loaf, the other was the bottom half of a burger bun from the week before.&quot;,
+		&quot;Both slices were spread with care with the finest quarter teaspoon of margarine from my kitchen.&quot;,
+		&quot;The cheese was half a slice of Kraft&#39;s finest dairy product, lovingly stacked.&quot;,
+		&quot;The meat, succulent and tender, was a paper-thin slice of devon, so thin one could read newsprint and stargaze through it.&quot;,
+		&quot;It smelt kinda funny.&quot;,
+		&quot;I tenderly packed it into a sandwich bag, brought it to the office, wrote my name on the sandwich instead of the bag by mistake, and placed into into the refrigerator to safeguard my culinary delight &#39;til lunch.&quot;,
+		&quot;So delicious, in fact, that a certain someone took it upon himself to ruin my day utterly and entirely.&quot;,
+		&quot;When lunchtime arrived, I strode triumphantly into the breakroom, pushed an utterly forgettable coworker of mine aside, and threw open the fridge door into another awaiting moron.&quot;,
+		&quot;Of course, there were several other lunches in front of where I had sequestered mine, so I took them and placed them gently into the bin, covering them with some paper towels.&quot;,
+		&quot;Alas, the sandwich, MY sandwich, was no longer there.&quot;,
+		&quot;I was distraught.&quot;,
+		&quot;And when I turned around, there he was, looking at me like I was worse than gum on his boot.&quot;,
+		&quot;&#39;&#39;SAMUEL&#39;&#39;&quot;,
+		&quot;Of course, this had meant he had STOLEN IT! Why else would he look at me like that?&quot;,
+		&quot;[[A reasonable plan&lt;-There was only one thing to do]]&quot;
 	))
 
 	(set: _i to 1)
@@ -130,7 +126,19 @@ tw-story[tags~="Title"] tw-link {
 		(if: not _done)[
 			(live: 30ms)[
 				_done[(stop:)]
-				(if: _char &lt; _lines&#39;s _i&#39;s length)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
 					(set: _char to it + 1)
 					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
 				]
@@ -149,7 +157,19 @@ tw-story[tags~="Title"] tw-link {
 
 
 			(click-rerun: ?dialogBox)[
-				(if: _char &lt; _lines&#39;s _i&#39;s length)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
 					(set: _char to _lines&#39;s _i&#39;s length)
 					(replace: ?text)[(print: _lines&#39;s _i)]
 				]
@@ -173,6 +193,7 @@ tw-story[tags~="Title"] tw-link {
 	]
     
 	&lt;script&gt;
+		document.title = &quot;Discovery of the Sandwhich Theft&quot;;
 		document.addEventListener(&quot;keydown&quot;, function (e) {
 			if (e.code === &quot;Space&quot;) {
 				e.preventDefault();
@@ -184,7 +205,12 @@ tw-story[tags~="Title"] tw-link {
 			}
 		})
 	&lt;/script&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="A reasonable plan" tags="" position="800,300" size="100,100">|clickArea&gt;[
+	&lt;style&gt;
+		tw-story[tags~=&quot;DiscovTheft&quot;] {
+		  background-image:url(&quot;assets/office.jpg&quot;);
+		}
+	&lt;/style&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="A reasonable plan" tags="ReasonPlan" position="600,300" size="100,100">|clickArea&gt;[
 	|dialogBox&gt;[
 		&lt;div class=&quot;dialogBox&quot;&gt;
 			|text&gt;[]
@@ -197,9 +223,15 @@ tw-story[tags~="Title"] tw-link {
 
 &lt;div style=&quot;display: none&quot;&gt;
 	(set: _lines to (a:
-	&quot;Line 1&quot;,
-	&quot;Line 2&quot;,
-	&quot;Line 3&quot;
+		&quot;I rushed home from work immediately, and began to assemble my thoughts.&quot;,
+		&quot;This fiend, this... this... Samuel, had stolen the very thing I held nearest and dearest to my stony heart.&quot;,
+		&quot;There was, of course, only a single course of action.&quot;,
+		&quot;He had to die.&quot;,
+		&quot;But not just him, oh no no no!&quot;,
+		&quot;His whole family had to die too!&quot;, 
+		&quot;And he&#39;d be last, just so he can writhe in terror as I take away what he loves!&quot;,
+		&quot;Like what he did to me!&quot;,
+		&quot;[[Tibetan Training Arc&lt;-But for now, I bide my time]]&quot;
 	))
 
 	(set: _i to 1)
@@ -211,7 +243,19 @@ tw-story[tags~="Title"] tw-link {
 		(if: not _done)[
 			(live: 30ms)[
 				_done[(stop:)]
-				(if: _char &lt; _lines&#39;s _i&#39;s length)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
 					(set: _char to it + 1)
 					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
 				]
@@ -230,7 +274,19 @@ tw-story[tags~="Title"] tw-link {
 
 
 			(click-rerun: ?dialogBox)[
-				(if: _char &lt; _lines&#39;s _i&#39;s length)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
 					(set: _char to _lines&#39;s _i&#39;s length)
 					(replace: ?text)[(print: _lines&#39;s _i)]
 				]
@@ -254,6 +310,7 @@ tw-story[tags~="Title"] tw-link {
 	]
     
 	&lt;script&gt;
+		document.title = &quot;A Reasonable Plan&quot;;
 		document.addEventListener(&quot;keydown&quot;, function (e) {
 			if (e.code === &quot;Space&quot;) {
 				e.preventDefault();
@@ -265,7 +322,15 @@ tw-story[tags~="Title"] tw-link {
 			}
 		})
 	&lt;/script&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Title Screen" tags="Title" position="400,300" size="100,100">(click: ?page)[(go-to: &quot;Intro&quot;)]</tw-passagedata><tw-passagedata pid="4" name="Menu" tags="header" position="300,100" size="100,100">&lt;!-- Sidebar Icon --&gt;
+	&lt;style&gt;
+		tw-story[tags~=&quot;ReasonPlan&quot;] {
+		  background-image:url(&quot;assets/office.jpg&quot;);
+		}
+	&lt;/style&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Title Screen" tags="Title" position="200,300" size="100,100">(click: ?page)[(go-to: &quot;Discovery of sandwich theft&quot;)]
+&lt;script&gt;
+	document.title = &quot;Ham n Cheese&quot;;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="4" name="Menu" tags="header" position="100,100" size="100,100">&lt;!-- Sidebar Icon --&gt;
 (replace: ?sidebar)[
 	|openBtn&gt;[☰]
 ]
@@ -298,7 +363,594 @@ tw-story[tags~="Title"] tw-link {
 			}
 		}
 	})
-&lt;/script&gt;</tw-passagedata></tw-storydata>
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="5" name="Tibetan Training Arc" tags="TrainingArc" position="800,300" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to (a:
+		&quot;To reach my goal, I had to become the best.&quot;,
+		&quot;To become the best, I had to be taught by the soon-to-be second best.&quot;,
+		&quot;\&quot;Who&#39;s that?\&quot; you may reasonably ask.&quot;,
+		&quot;Why, the monks of Tibet, of course.&quot;,
+		&quot;They&#39;d mould me into the ideal vessel for this task.&quot;,
+		&quot;I set off towards my goal early in the morning.&quot;,
+		&quot;The trail was hard to make out, but I persevered.&quot;,
+		&quot;Every step agony, every breath painful.&quot;,
+		&quot;I soldiered on, ever closer to my goal.&quot;,
+		&quot;I did not delay, did not yield.&quot;,
+		&quot;There were others on the same trail, of course.&quot;,
+		&quot;But I dealt with them the only way I knew how.&quot;,
+		&quot;And as I left them moaning and groaning in my wake, I felt they should&#39;ve been more thankful that pushing them over was all I did.&quot;,
+		&quot;That most arduous leg of the journey complete, I set my sights towards the place that I&#39;d sacrificed so much to get towards.&quot;,
+		&quot;The airport.&quot;,
+		&quot;A nice flight to Tibet, and a neat little bus transfer, and I&#39;d arrived at the monastery.&quot;,
+		&quot;This place would be where my old self, who cared about others far more than he&#39;d cared about himself, would go to die.&quot;,
+		&quot;The monks recognised my potential immediately, exchanged worried glances with each other (but alas, it was too late, for my training program was non-refundable), and gave me a pick between three proud weapons.&quot;,
+		&quot;[[Bow Training&lt;-The noble bow, able to strike from a distance]]
+		[[Sword Training&lt;-The valiant sword, cunning, ruthless, and effective, like me]]
+		[[Spear Training&lt;-The warding spear, protecting its wielder by keeping one&#39;s enemies at bay]]&quot;
+	))
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;Tibetan Training Arc&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		})
+	&lt;/script&gt;
+	&lt;style&gt;
+		tw-story[tags~=&quot;TrainingArc&quot;] {
+		  background-image:url(&quot;assets/office.jpg&quot;);
+		}
+	&lt;/style&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Bow Training" tags="TrainBow" position="1000,150" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: $training to &quot;bow&quot;)
+	
+	(set: _lines to (a:
+		&quot;The ultimate test of the bow, and the best way to train, is to shoot an apple off the head of a running monk.&quot;,
+		&quot;Of course, this is impossible, given I couldn&#39;t do it.&quot;,
+		&quot;Therefore, I simply tied his shoelaces together when he wasn&#39;t looking.&quot;,
+		&quot;Once he started running, he fell over, and I could shoot the apple (with the last arrow in my quiver I may add).&quot;,
+		&quot;[[Done with the monks&lt;-Now, to have praise lavished upon me]]&quot;
+	))
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;Bow Training&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		})
+	&lt;/script&gt;
+	&lt;style&gt;
+		tw-story[tags~=&quot;TrainBow&quot;] {
+		  background-image:url(&quot;assets/office.jpg&quot;);
+		}
+	&lt;/style&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Sword Training" tags="TrainSword" position="1000,300" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: $training to &quot;sword&quot;)
+	
+	(set: _lines to (a:
+		&quot;The ultimate test of the sword, and the best way to train, is to cleave through a path of the most delicate silks.&quot;,
+		&quot;Of course, this is impossible, given I couldn&#39;t do it.&quot;,
+		&quot;Therefore, slowly but surely, I degraded the silks to be used with an acid made from my dinners, until even the lightest breeze could tear them to shreds.&quot;,
+		&quot;It was then a simple matter of using my great swordsman skills to show off.&quot;,
+		&quot;[[Done with the monks&lt;-Now, to have praise lavished upon me]]&quot;
+	))
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;Sword Training&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		})
+	&lt;/script&gt;
+	&lt;style&gt;
+		tw-story[tags~=&quot;TrainSword&quot;] {
+		  background-image:url(&quot;assets/office.jpg&quot;);
+		}
+	&lt;/style&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="Spear Training" tags="TrainSpear" position="1000,450" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: $training to &quot;spear&quot;)
+	
+	(set: _lines to (a:
+		&quot;The ultimate test of the spear, and the best way to train, is on one leg, trying to stab through a hole the size of the tip of the spear itself.&quot;,
+		&quot;Of course, this is impossible, given I couldn&#39;t do it.&quot;,
+		&quot;Therefore, I simply chipped away at the edges of the hole with every failed attempt.&quot;,
+		&quot;Once the hole had reached a respectable size, that of a Shetland Pony, I could do the task with ease.&quot;,
+		&quot;[[Done with the monks&lt;-Now, to have praise lavished upon me]]&quot;
+	))
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;Spear Training&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		})
+	&lt;/script&gt;
+	&lt;style&gt;
+		tw-story[tags~=&quot;TrainSpear&quot;] {
+		  background-image:url(&quot;assets/office.jpg&quot;);
+		}
+	&lt;/style&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Done with the monks" tags="DoneMonks" position="1200,300" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to (a:
+		&quot;\&quot;Congratulations\&quot; the abbot of the monastery said, clearly weary of having to view my superiority every day.&quot;,
+		&quot;\&quot;You finished the 30-day &#39;Train Like a Monk&#39; program in record time.\&quot;&quot;,
+		&quot;\&quot;30 years of record time, to be exact.\&quot;&quot;,
+		&quot;I said nothing, and simply beamed with pride as I left.&quot;,
+		&quot;[[Back to the city 30 years later&lt;-Back to where it all began]]&quot;
+	))
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;Done with the Monks&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		})
+	&lt;/script&gt;
+	&lt;style&gt;
+		tw-story[tags~=&quot;DoneMonks&quot;] {
+		  background-image:url(&quot;assets/office.jpg&quot;);
+		}
+	&lt;/style&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Back to the city 30 years later" tags="BackToCity" position="1400,300" size="100,100">(set: $killIndex to 0)</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

@@ -20,6 +20,7 @@ tw-story
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; 
+  background-color: white;
 }
 
 /* Remove click border */
@@ -85,7 +86,9 @@ tw-sidebar tw-expression tw-icon {
 
 tw-story[tags~="Title"] tw-link {
   color: black;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Intro" color="green"></tw-tag><tw-tag name="Title" color="green"></tw-tag><tw-tag name="header" color="blue"></tw-tag><tw-tag name="discovTheft" color="green"></tw-tag><tw-tag name="DiscovTheft" color="green"></tw-tag><tw-tag name="ReasonPlan" color="green"></tw-tag><tw-tag name="TrainingArc" color="green"></tw-tag><tw-tag name="TrainBow" color="red"></tw-tag><tw-tag name="TrainSword" color="orange"></tw-tag><tw-tag name="TrainSpear" color="yellow"></tw-tag><tw-tag name="DoneMonks" color="green"></tw-tag><tw-tag name="BackToCity" color="green"></tw-tag><tw-passagedata pid="1" name="Discovery of sandwich theft" tags="DiscovTheft" position="400,300" size="100,100">|clickArea&gt;[
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.updateBG = function (src) {
+	document.querySelector("tw-story").style.backgroundImage = `url('${src}')`;
+}</script><tw-tag name="Intro" color="green"></tw-tag><tw-tag name="Title" color="green"></tw-tag><tw-tag name="header" color="blue"></tw-tag><tw-tag name="discovTheft" color="green"></tw-tag><tw-tag name="DiscovTheft" color="green"></tw-tag><tw-tag name="ReasonPlan" color="green"></tw-tag><tw-tag name="TrainingArc" color="green"></tw-tag><tw-tag name="TrainBow" color="red"></tw-tag><tw-tag name="TrainSword" color="orange"></tw-tag><tw-tag name="TrainSpear" color="yellow"></tw-tag><tw-tag name="DoneMonks" color="green"></tw-tag><tw-tag name="BackToCity" color="green"></tw-tag><tw-passagedata pid="1" name="Discovery of sandwich theft" tags="DiscovTheft" position="400,300" size="100,100">|clickArea&gt;[
 	|dialogBox&gt;[
 		&lt;div class=&quot;dialogBox&quot;&gt;
 			|text&gt;[]
@@ -98,7 +101,7 @@ tw-story[tags~="Title"] tw-link {
 
 &lt;div style=&quot;display: none&quot;&gt;
 	(set: _lines to (a:
-				&quot;It was... delicious.&quot;,
+		&quot;It was... delicious.&quot;,
 		&quot;The finest sandwich to ever grace the earth.&quot;,
 		&quot;Forged during the bread shortage of &#39;26, one slice was the end of a white loaf, the other was the bottom half of a burger bun from the week before.&quot;,
 		&quot;Both slices were spread with care with the finest quarter teaspoon of margarine from my kitchen.&quot;,
@@ -116,6 +119,18 @@ tw-story[tags~="Title"] tw-link {
 		&quot;Of course, this had meant he had STOLEN IT! Why else would he look at me like that?&quot;,
 		&quot;[[A reasonable plan&lt;-There was only one thing to do]]&quot;
 	))
+
+	(set: _bgList to (a:
+		(a: 3, &quot;assets/sandwich/Sandwich_1_v001.png&quot;),
+		(a: 4, &quot;assets/sandwich/Sandwich_2_v001.png&quot;),
+		(a: 5, &quot;assets/sandwich/Sandwich_3_v001.png&quot;),
+		(a: 6, &quot;assets/sandwich/Sandwich_4_v001.png&quot;),
+		(a: 8, &quot;assets/sandwich/Sandwich_5_v001.png&quot;)
+	))
+
+	&lt;script&gt;
+		updateBG(_bgList[0][1]);
+	&lt;/script&gt;
 
 	(set: _i to 1)
 	(set: _char to 0)
@@ -178,6 +193,14 @@ tw-story[tags~="Title"] tw-link {
 						(set: _i to it + 1)
 						(set: _char to 0)
 						(replace: ?text)[]
+						(for: each _bg, ..._bgList)[
+							(if: _i is _bg&#39;s 1st)[
+								(set: _newBG to _bg&#39;s 2nd)
+								&lt;script&gt;
+									updateBG(_newBG);
+								&lt;/script&gt;
+							]
+						]
 					]
 				]
 			]
@@ -205,11 +228,6 @@ tw-story[tags~="Title"] tw-link {
 			}
 		})
 	&lt;/script&gt;
-	&lt;style&gt;
-		tw-story[tags~=&quot;DiscovTheft&quot;] {
-		  background-image:url(&quot;assets/office.jpg&quot;);
-		}
-	&lt;/style&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="A reasonable plan" tags="ReasonPlan" position="600,300" size="100,100">|clickArea&gt;[
 	|dialogBox&gt;[
 		&lt;div class=&quot;dialogBox&quot;&gt;

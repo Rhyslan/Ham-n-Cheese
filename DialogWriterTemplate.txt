@@ -16,6 +16,10 @@
 		"Line 3"
 	))
 
+	<script>
+		updateBG("assets/office.jpg");
+	</script>
+
 	(set: _i to 1)
 	(set: _char to 0)
 	(set: _done to false)
@@ -104,9 +108,4 @@
 			}
 		});
 	</script>
-	<style>
-		tw-story[tags~="Tag"] {
-		  background-image:url("assets/image.png");
-		}
-	</style>
 </div>

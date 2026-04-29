@@ -88,7 +88,7 @@ tw-story[tags~="Title"] tw-link {
   color: black;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.updateBG = function (src) {
 	document.querySelector("tw-story").style.backgroundImage = `url('${src}')`;
-}</script><tw-tag name="Intro" color="green"></tw-tag><tw-tag name="Title" color="green"></tw-tag><tw-tag name="header" color="blue"></tw-tag><tw-tag name="discovTheft" color="green"></tw-tag><tw-tag name="DiscovTheft" color="green"></tw-tag><tw-tag name="ReasonPlan" color="green"></tw-tag><tw-tag name="TrainingArc" color="green"></tw-tag><tw-tag name="TrainBow" color="red"></tw-tag><tw-tag name="TrainSword" color="orange"></tw-tag><tw-tag name="TrainSpear" color="yellow"></tw-tag><tw-tag name="DoneMonks" color="green"></tw-tag><tw-tag name="BackToCity" color="green"></tw-tag><tw-passagedata pid="1" name="Discovery of sandwich theft" tags="DiscovTheft" position="400,300" size="100,100">|clickArea&gt;[
+}</script><tw-tag name="Intro" color="green"></tw-tag><tw-tag name="discovTheft" color="green"></tw-tag><tw-tag name="TrainBow" color="red"></tw-tag><tw-tag name="TrainSword" color="orange"></tw-tag><tw-tag name="TrainSpear" color="yellow"></tw-tag><tw-tag name="Father1" color="green"></tw-tag><tw-tag name="Mother1" color="green"></tw-tag><tw-tag name="Sister1" color="green"></tw-tag><tw-tag name="Father2" color="blue"></tw-tag><tw-tag name="Mother2" color="blue"></tw-tag><tw-tag name="Sister2" color="blue"></tw-tag><tw-tag name="Father3" color="purple"></tw-tag><tw-tag name="Mother3" color="purple"></tw-tag><tw-tag name="Sister3" color="purple"></tw-tag><tw-passagedata pid="1" name="Discovery of sandwich theft" tags="DiscovTheft" position="400,300" size="100,100">|clickArea&gt;[
 	|dialogBox&gt;[
 		&lt;div class=&quot;dialogBox&quot;&gt;
 			|text&gt;[]
@@ -251,6 +251,10 @@ tw-story[tags~="Title"] tw-link {
 		&quot;Like what he did to me!&quot;,
 		&quot;[[Tibetan Training Arc&lt;-But for now, I bide my time]]&quot;
 	))
+    
+    &lt;script&gt;
+		updateBG(&quot;assets/office.jpg&quot;);
+	&lt;/script&gt;
 
 	(set: _i to 1)
 	(set: _char to 0)
@@ -340,11 +344,6 @@ tw-story[tags~="Title"] tw-link {
 			}
 		})
 	&lt;/script&gt;
-	&lt;style&gt;
-		tw-story[tags~=&quot;ReasonPlan&quot;] {
-		  background-image:url(&quot;assets/office.jpg&quot;);
-		}
-	&lt;/style&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Title Screen" tags="Title" position="200,300" size="100,100">(click: ?page)[(go-to: &quot;Discovery of sandwich theft&quot;)]
 &lt;script&gt;
 	document.title = &quot;Ham n Cheese&quot;;
@@ -416,6 +415,10 @@ tw-story[tags~="Title"] tw-link {
 		[[Sword Training&lt;-The valiant sword, cunning, ruthless, and effective, like me]]
 		[[Spear Training&lt;-The warding spear, protecting its wielder by keeping one&#39;s enemies at bay]]&quot;
 	))
+    
+    &lt;script&gt;
+		updateBG(&quot;assets/office.jpg&quot;);
+	&lt;/script&gt;
 
 	(set: _i to 1)
 	(set: _char to 0)
@@ -505,11 +508,6 @@ tw-story[tags~="Title"] tw-link {
 			}
 		})
 	&lt;/script&gt;
-	&lt;style&gt;
-		tw-story[tags~=&quot;TrainingArc&quot;] {
-		  background-image:url(&quot;assets/office.jpg&quot;);
-		}
-	&lt;/style&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Bow Training" tags="TrainBow" position="1000,150" size="100,100">|clickArea&gt;[
 	|dialogBox&gt;[
 		&lt;div class=&quot;dialogBox&quot;&gt;
@@ -531,6 +529,10 @@ tw-story[tags~="Title"] tw-link {
 		&quot;Once he started running, he fell over, and I could shoot the apple (with the last arrow in my quiver I may add).&quot;,
 		&quot;[[Done with the monks&lt;-Now, to have praise lavished upon me]]&quot;
 	))
+    
+    &lt;script&gt;
+		updateBG(&quot;assets/office.jpg&quot;);
+	&lt;/script&gt;
 
 	(set: _i to 1)
 	(set: _char to 0)
@@ -620,11 +622,6 @@ tw-story[tags~="Title"] tw-link {
 			}
 		})
 	&lt;/script&gt;
-	&lt;style&gt;
-		tw-story[tags~=&quot;TrainBow&quot;] {
-		  background-image:url(&quot;assets/office.jpg&quot;);
-		}
-	&lt;/style&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Sword Training" tags="TrainSword" position="1000,300" size="100,100">|clickArea&gt;[
 	|dialogBox&gt;[
 		&lt;div class=&quot;dialogBox&quot;&gt;
@@ -646,6 +643,10 @@ tw-story[tags~="Title"] tw-link {
 		&quot;It was then a simple matter of using my great swordsman skills to show off.&quot;,
 		&quot;[[Done with the monks&lt;-Now, to have praise lavished upon me]]&quot;
 	))
+    
+    &lt;script&gt;
+		updateBG(&quot;assets/office.jpg&quot;);
+	&lt;/script&gt;
 
 	(set: _i to 1)
 	(set: _char to 0)
@@ -735,11 +736,6 @@ tw-story[tags~="Title"] tw-link {
 			}
 		})
 	&lt;/script&gt;
-	&lt;style&gt;
-		tw-story[tags~=&quot;TrainSword&quot;] {
-		  background-image:url(&quot;assets/office.jpg&quot;);
-		}
-	&lt;/style&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="Spear Training" tags="TrainSpear" position="1000,450" size="100,100">|clickArea&gt;[
 	|dialogBox&gt;[
 		&lt;div class=&quot;dialogBox&quot;&gt;
@@ -761,6 +757,10 @@ tw-story[tags~="Title"] tw-link {
 		&quot;Once the hole had reached a respectable size, that of a Shetland Pony, I could do the task with ease.&quot;,
 		&quot;[[Done with the monks&lt;-Now, to have praise lavished upon me]]&quot;
 	))
+    
+    &lt;script&gt;
+		updateBG(&quot;assets/office.jpg&quot;);
+	&lt;/script&gt;
 
 	(set: _i to 1)
 	(set: _char to 0)
@@ -850,11 +850,6 @@ tw-story[tags~="Title"] tw-link {
 			}
 		})
 	&lt;/script&gt;
-	&lt;style&gt;
-		tw-story[tags~=&quot;TrainSpear&quot;] {
-		  background-image:url(&quot;assets/office.jpg&quot;);
-		}
-	&lt;/style&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Done with the monks" tags="DoneMonks" position="1200,300" size="100,100">|clickArea&gt;[
 	|dialogBox&gt;[
 		&lt;div class=&quot;dialogBox&quot;&gt;
@@ -874,6 +869,10 @@ tw-story[tags~="Title"] tw-link {
 		&quot;I said nothing, and simply beamed with pride as I left.&quot;,
 		&quot;[[Back to the city 30 years later&lt;-Back to where it all began]]&quot;
 	))
+    
+    &lt;script&gt;
+		updateBG(&quot;assets/office.jpg&quot;);
+	&lt;/script&gt;
 
 	(set: _i to 1)
 	(set: _char to 0)
@@ -963,12 +962,1744 @@ tw-story[tags~="Title"] tw-link {
 			}
 		})
 	&lt;/script&gt;
-	&lt;style&gt;
-		tw-story[tags~=&quot;DoneMonks&quot;] {
-		  background-image:url(&quot;assets/office.jpg&quot;);
-		}
-	&lt;/style&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Back to the city 30 years later" tags="BackToCity" position="1400,300" size="100,100">(set: $killIndex to 0)</tw-passagedata></tw-storydata>
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Back to the city 30 years later" tags="BackToCity" position="1400,300" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to (a:
+		&quot;It&#39;d been so long since I&#39;d set foot here.&quot;,
+		&quot;I was almost overtaken, awash with memories of admirers, sycophants, and sandwiches.&quot;,
+		&quot;But I had a mission.&quot;,
+		&quot;I began my hunt relentlessly.&quot;,
+		&quot;My first target of interest was...&quot;,
+		&quot;[[The father&lt;-His father]]
+		[[The mother&lt;-His mother]]
+		[[The sister&lt;-His sister]]&quot;
+	))
+    
+    &lt;script&gt;
+		updateBG(&quot;assets/office.jpg&quot;);
+	&lt;/script&gt;
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;Back to the City 30 Years Later&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="The father" tags="Father1" position="1600,150" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to (a:
+		&quot;One thing I&#39;d not expected before all this is how ordinary a person could have such horrible a spawn.&quot;,
+		&quot;His father frequented a bar in one of the plebbier parts of Scumville.&quot;,
+		&quot;On my daily stalks I&#39;d managed to uncover the fact that he was divorced.&quot;,
+		&quot;Of course, it was probably Samuel&#39;s fault.&quot;,
+		&quot;I&#39;d managed to befriend this husk of a man, and when, one night, he&#39;d had a little too much to drink, I elected to walk him home.&quot;,
+		&quot;On this walk, he saw some ducks off the bridge, and I simply pushed him.&quot;,
+		&quot;Now, for my next target...&quot;,
+		&quot;[[The mother 2&lt;-His mother]]
+		[[The sister 2&lt;-His sister]]&quot;
+	))
+
+	&lt;script&gt;
+		updateBG(&quot;assets/kills/FatherKill_v001.png&quot;);
+	&lt;/script&gt;
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;The Father&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="The mother" tags="Mother1" position="1600,300" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to (a:
+		&quot;One thing I&#39;d not expected before all this is how a woman such as this could be the mother of such a parasite.&quot;,
+		&quot;His mother is a very hard working woman, and works in a sawmill.&quot;,
+		&quot;On my daily stalks I&#39;d managed to uncover the fact that she was divorced, allegedly because her husband was unemployed while she was working 80 hour weeks.&quot;,
+		&quot;Of course, we all know who the real course of this divorce was: Samuel.&quot;,
+		&quot;Now, sawmills have protections against any sort of spark or open flame due to the sawdust saturating the air.&quot;,
+		&quot;However, these protections were insuffcient, as evidenced by the mill&#39;s \&quot;accidental\&quot; explosion.&quot;,
+		&quot;Now, for my next target...&quot;,
+		&quot;[[The father 2&lt;-His father]]
+		[[The sister 2&lt;-His sister]]&quot;
+	))
+
+	&lt;script&gt;
+		updateBG(&quot;assets/office.jpg&quot;);
+	&lt;/script&gt;
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;The Mother&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="The sister" tags="Sister1" position="1600,450" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to (a:
+		&quot;One thing I&#39;d not expected before all this is how a woman such as this could be the sister of such a monster.&quot;,
+		&quot;His sister volunteers at an animal shelter&quot;,
+		&quot;So, therefore, I too volunteered there&quot;,
+		&quot;And on one fateful day, when a large dog, named &#39;Brutus&#39;, \&quot;slipped\&quot; his leash, he tore her to shreds, the poor girl.&quot;,
+		&quot;Now, for my next target...&quot;,
+		&quot;[[The father 2&lt;-His father]]
+		[[The mother 2&lt;-His mother]]&quot;
+	))
+
+	&lt;script&gt;
+		updateBG(&quot;assets/kills/SisterKill_v001.png&quot;);
+	&lt;/script&gt;
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;The Sister&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="The mother 2" tags="Mother2" position="1800,300" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to &quot;&quot;)
+	(if: not (visited: &quot;The father&quot;))[
+		(set: _lines to (a:
+			&quot;As it turns out, his mother is a very hard working woman, and works in a sawmill.&quot;,
+			&quot;On my daily stalks I&#39;d managed to uncover the fact that she was divorced, allegedly because her husband was unemployed while she was working 80 hour weeks.&quot;,
+			&quot;Of course, we all know who the real course of this divorce was: Samuel.&quot;,
+			&quot;Now, sawmills have protections against any sort of spark or open flame due to the sawdust saturating the air.&quot;,
+			&quot;However, these protections were insuffcient, as evidenced by the mill&#39;s \&quot;accidental\&quot; explosion.&quot;,
+			&quot;Now, for my third target...&quot;,
+			&quot;[[The father 3&lt;-His father]]&quot;
+		))
+	]
+	(else-if: not (visited: &quot;The sister&quot;))[
+		(set: _lines to (a:
+			&quot;As it turns out, his mother is a very hard working woman, and works in a sawmill.&quot;,
+			&quot;On my daily stalks I&#39;d managed to uncover the fact that she was divorced, allegedly because her husband was unemployed while she was working 80 hour weeks.&quot;,
+			&quot;Of course, we all know who the real course of this divorce was: Samuel.&quot;,
+			&quot;Now, sawmills have protections against any sort of spark or open flame due to the sawdust saturating the air.&quot;,
+			&quot;However, these protections were insuffcient, as evidenced by the mill&#39;s \&quot;accidental\&quot; explosion.&quot;,
+			&quot;Now, for my third target...&quot;,
+			&quot;[[The sister 3&lt;-His sister]]&quot;
+		))
+	]
+
+	&lt;script&gt;
+		updateBG(&quot;assets/office.jpg&quot;);
+	&lt;/script&gt;
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;The Mother&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="The sister 2" tags="Sister2" position="1800,450" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to &quot;&quot;)
+	(if: not (visited: &quot;The father&quot;))[
+		(set: _lines to (a:
+			&quot;As it turns out, his sister volunteers at an animal shelter.&quot;,
+			&quot;So, therefore, I too volunteered there.&quot;,
+			&quot;And on one fateful day, when a large dog, named &#39;Brutus&#39;, \&quot;slipped\&quot; his leash, he tore her to shreds, the poor girl.&quot;,
+			&quot;Now, for my next target...&quot;,
+			&quot;[[The father 3&lt;-His father]]&quot;
+		))
+	]
+	(else-if: not (visited: &quot;The mother&quot;))[
+		(set: _lines to (a:
+			&quot;As it turns out, his sister volunteers at an animal shelter.&quot;,
+			&quot;So, therefore, I too volunteered there.&quot;,
+			&quot;And on one fateful day, when a large dog, named &#39;Brutus&#39;, \&quot;slipped\&quot; his leash, he tore her to shreds, the poor girl.&quot;,
+			&quot;Now, for my next target...&quot;,
+			&quot;[[The mother 3&lt;-His mother]]&quot;
+		))
+	]
+
+	&lt;script&gt;
+		updateBG(&quot;assets/office.jpg&quot;);
+	&lt;/script&gt;
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;The Sister&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="The father 2" tags="Father2" position="1800,150" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to &quot;&quot;)
+	(if: not (visited: &quot;The mother&quot;))[
+		(set: _lines to (a:
+			&quot;As it turns out, his father frequented a bar in one of the plebbier parts of Scumville.&quot;,
+			&quot;On my daily stalks I&#39;d managed to uncover the fact that he was divorced.&quot;,
+			&quot;Of course, it was probably Samuel&#39;s fault.&quot;,
+			&quot;I&#39;d managed to befriend this husk of a man, and when, one night, he&#39;d had a little too much to drink, I elected to walk him home.&quot;,
+			&quot;On this walk, he saw some ducks off the bridge, and I simply pushed him.&quot;,
+			&quot;Now, for my next target...&quot;,
+			&quot;[[The mother 3&lt;-His mother]]&quot;
+		))
+	]
+	(else-if: not (visited: &quot;The sister&quot;))[
+		(set: _lines to (a:
+			&quot;As it turns out, his father frequented a bar in one of the plebbier parts of Scumville.&quot;,
+			&quot;On my daily stalks I&#39;d managed to uncover the fact that he was divorced.&quot;,
+			&quot;Of course, it was probably Samuel&#39;s fault.&quot;,
+			&quot;I&#39;d managed to befriend this husk of a man, and when, one night, he&#39;d had a little too much to drink, I elected to walk him home.&quot;,
+			&quot;On this walk, he saw some ducks off the bridge, and I simply pushed him.&quot;,
+			&quot;Now, for my next target...&quot;,
+			&quot;[[The sister 3&lt;-His sister]]&quot;
+		))
+	]
+
+	&lt;script&gt;
+		updateBG(&quot;assets/kills/FatherKill_v001.png&quot;);
+	&lt;/script&gt;
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;The Father&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="The sister 3" tags="Sister3" position="2000,450" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to &quot;&quot;)
+	(if: $training is &quot;bow&quot;)[
+		`(set: $gotAway to true)
+		(set: _lines to (a:
+			&quot;After dealing with the parents, the sister is presenting an issue.&quot;,
+			&quot;She&#39;s gotten wise, and hidden herself at home.&quot;,
+			&quot;I followed her home, and went to present her with her fate.&quot;,
+			&quot;I gave chase, and she led me into a narrow hallway.&quot;,
+			&quot;I tried to catch up, but navigating the hall with my bow proved too cumbersome, and she got away.&quot;,
+			&quot;[[Onto the thief&lt;-Onto the thief himself]]&quot;
+		))
+	]
+	(else-if: $training is &quot;sword&quot;)[
+		(set: $gotAway to false)
+		(set: _lines to (a:
+			&quot;After dealing with the parents, the sister is presenting an issue.&quot;,
+			&quot;She&#39;s gotten wise, and hidden herself at home.&quot;,
+			&quot;I followed her home, and went to present her with her fate.&quot;,
+			&quot;I gave chase, and she led me into a narrow hallway.&quot;,
+			&quot;I caught up to her with my sword, and made short work of her.&quot;,
+			&quot;[[Onto the thief&lt;-Onto the thief himself]]&quot;
+		))
+	]
+	(else-if: $training is &quot;spear&quot;)[
+		(set: $gotAway to true)
+		(set: _lines to (a:
+			&quot;After dealing with the parents, the sister is presenting an issue.&quot;,
+			&quot;She&#39;s gotten wise, and hidden herself at home.&quot;,
+			&quot;I followed her home, and went to present her with her fate.&quot;,
+			&quot;I gave chase, and she led me into a narrow hallway.&quot;,
+			&quot;I tried to catch up, but navigating the hall with my spear proved too cumbersome, and she got away.&quot;,
+			&quot;[[Onto the thief&lt;-Onto the thief himself]]&quot;
+		))
+	]
+
+	&lt;script&gt;
+		updateBG(&quot;assets/kills/SisterKill_v001.png&quot;);
+	&lt;/script&gt;
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;The Sister&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="The mother 3" tags="Mother3" position="2000,300" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to &quot;&quot;)
+	(if: $training is &quot;bow&quot;)[
+		(set: $gotAway to false)
+		(set: _lines to (a:
+			&quot;After dealing with the father and sister, the mother is presenting an issue.&quot;,
+			&quot;She&#39;s gotten wise, and hidden herself at home.&quot;,
+			&quot;I followed her home, and went to present her with her fate.&quot;,
+			&quot;Despite her age, and the physical job she works, she hurled herself out of the window and sped down the street at breakneck pace.&quot;,
+			&quot;However, my arrows can be shot quite far, and only a single one is plenty lethal.&quot;,
+			&quot;[[Onto the thief&lt;-Onto the thief himself]]&quot;
+		))
+	]
+	(else-if: $training is &quot;sword&quot;)[
+		(set: $gotAway to true)
+		(set: _lines to (a:
+			&quot;After dealing with the father and sister, the mother is presenting an issue.&quot;,
+			&quot;She&#39;s gotten wise, and hidden herself at home.&quot;,
+			&quot;I followed her home, and went to present her with her fate.&quot;,
+			&quot;Despite her age, and the physical job she works, she hurled herself out of the window and sped down the street at breakneck pace.&quot;,
+			&quot;Alas, I can&#39;t catch up to her, rendering my sword useless.&quot;,
+			&quot;[[Onto the thief&lt;-Onto the thief himself]]&quot;
+		))
+	]
+	(else-if: $training is &quot;spear&quot;)[
+		(set: $gotAway to true)
+		(set: _lines to (a:
+			&quot;After dealing with the father and sister, the mother is presenting an issue.&quot;,
+			&quot;She&#39;s gotten wise, and hidden herself at home.&quot;,
+			&quot;I followed her home, and went to present her with her fate.&quot;,
+			&quot;Despite her age, and the physical job she works, she hurled herself out of the window and sped down the street at breakneck pace.&quot;,
+			&quot;Alas, I can&#39;t catch up to her, rendering my spear useless.&quot;,
+			&quot;[[Onto the thief&lt;-Onto the thief himself]]&quot;
+		))
+	]
+
+	&lt;script&gt;
+		updateBG(&quot;assets/office.jpg&quot;);
+	&lt;/script&gt;
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;The Mother&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="The father 3" tags="Father3" position="2000,150" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to &quot;&quot;)
+	(if: $training is &quot;bow&quot;)[
+		(set: $gotAway to true)
+		(set: _lines to (a:
+			&quot;After dealing with the mother and sister, the father is presenting an issue.&quot;,
+			&quot;He&#39;s gotten wise, and hidden himself at home.&quot;,
+			&quot;I followed him home, and went to present him with his fate.&quot;,
+			&quot;Unfortunately, he&#39;d had a spot of fencing instruction throughout his life, and so confronted me weapon in hand.&quot;,
+			&quot;Unfortunately, I didn&#39;t have time to get my bow out, and so I had to flee, allowing him to escape.&quot;,
+			&quot;[[Onto the thief&lt;-Onto the thief himself]]&quot;
+		))
+	]
+	(else-if: $training is &quot;sword&quot;)[
+		(set: $gotAway to true)
+		(set: _lines to (a:
+			&quot;After dealing with the mother and sister, the father is presenting an issue.&quot;,
+			&quot;He&#39;s gotten wise, and hidden himself at home.&quot;,
+			&quot;I followed him home, and went to present him with his fate.&quot;,
+			&quot;Unfortunately, he&#39;d had a spot of fencing instruction throughout his life, and so confronted me weapon in hand.&quot;,
+			&quot;He must have had performance enhancers, since he was far greater at swordfighting than me, and managed to get away.&quot;,
+			&quot;[[Onto the thief&lt;-Onto the thief himself]]&quot;
+		))
+	]
+	(else-if: $training is &quot;spear&quot;)[
+		(set: $gotAway to false)
+		(set: _lines to (a:
+			&quot;After dealing with the mother and sister, the father is presenting an issue.&quot;,
+			&quot;He&#39;s gotten wise, and hidden himself at home.&quot;,
+			&quot;I followed him home, and went to present him with his fate.&quot;,
+			&quot;Unfortunately, he&#39;d had a spot of fencing instruction throughout his life, and so confronted me weapon in hand.&quot;,
+			&quot;But with my spear, I was able to make short work of him, since I had far greater range than he did.&quot;,
+			&quot;[[Onto the thief&lt;-Onto the thief himself]]&quot;
+		))
+	]
+
+	&lt;script&gt;
+		updateBG(&quot;assets/kills/FatherKill_v001.png&quot;);
+	&lt;/script&gt;
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;The Father&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Onto the thief" tags="" position="2200,300" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to (a:
+		&quot;Tracking Samuel down was easy.&quot;,
+		&quot;He stayed in the same rut his whole life, and never amounted to anything.&quot;,
+		&quot;Well, he&#39;d been promoted a bit, something something &#39;VP&#39; something, but he was still insubstantial.&quot;,
+		&quot;I strode into the building with a righteous mandate, entered the lift, and ascended toward my fate.&quot;,
+		&quot;[[The confrontation]]&quot;
+	))
+
+	&lt;script&gt;
+		updateBG(&quot;assets/office.jpg&quot;);
+	&lt;/script&gt;
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;Onto the Thief&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="The confrontation" tags="" position="2400,300" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to &quot;&quot;)
+	(if: $gotAway is true)[
+		(set: _lines to (a:
+			&quot;\&quot;Hi there, can I... help you?\&quot; he said, shit eating grin present in his mind no doubt.&quot;,
+			&quot;\&quot;You have something of mine\&quot; I replied&quot;,
+			&quot;\&quot;I&#39;m sorry, who are you?\&quot; he quizzed.&quot;,
+			&quot;\&quot;You took my sandwich!\&quot; I said, lunging at him, knife in hand.&quot;,
+			&quot;\&quot;What sandwich?\&quot; he barked, struggling against me&quot;,
+			&quot;\&quot;You know exactly which sandwich!\&quot;&quot;,
+			&quot;\&quot;It was my everything.\&quot;&quot;,
+			&quot;\&quot;The only thing I loved.\&quot;&quot;,
+			&quot;\&quot;And you took it from me!\&quot;&quot;,
+			&quot;\&quot;So, I&#39;ll have to gut you to get it back!\&quot; I sneered.&quot;,
+			&quot;I plunge the knife in, and twist.&quot;,
+			&quot;[[Sandwich was never stolen ending&lt;-I take a stroll to the fridge, for old time&#39;s sake]]&quot;
+		))
+	]
+	(if: $gotAway is false)[
+		(set: _lines to (a:
+			&quot;\&quot;Hi there, can I... help you?\&quot; he said, shit eating grin present in his mind no doubt.&quot;,
+			&quot;\&quot;You have something of mine\&quot; I replied&quot;,
+			&quot;\&quot;I&#39;m sorry, who are you?\&quot; he quizzed.&quot;,
+			&quot;\&quot;You took my sandwich!\&quot; I said, lunging at him, knife in hand.&quot;,
+			&quot;\&quot;What sandwich?\&quot; he barked, struggling against me&quot;,
+			&quot;\&quot;You know exactly which sandwich!\&quot;&quot;,
+			&quot;\&quot;It was my everything.\&quot;&quot;,
+			&quot;\&quot;The only thing I loved.\&quot;&quot;,
+			&quot;\&quot;And you took it from me!\&quot;&quot;,
+			&quot;\&quot;So, I&#39;ll have to gut you to get it back!\&quot; I sneered.&quot;,
+			&quot;But at that moment, I had decided that too much had been lost already.&quot;,
+			&quot;My sandwich was long-digested, and nothing I could do could let me eat it.&quot;,
+			&quot;[[Mercy ending&lt;-\&quot;Too much blood has been shed\&quot;]]&quot;
+		))
+	]
+
+	&lt;script&gt;
+		updateBG(&quot;assets/office.jpg&quot;);
+	&lt;/script&gt;
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;The Confrontation&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Sandwich was never stolen ending" tags="" position="2600,225" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to (a:
+		&quot;I opened up the fridge, and peered in.&quot;,
+		&quot;I took the containers of lunch, and instead of putting them in the bin, opened the containers, lifted a panel in the roof, and sequestered the food there, as my time at the monastery had given me a greater sense of my impact on the world.&quot;,
+		&quot;I open the fridge yet again, only to find a certain something staring at me.&quot;,
+		&quot;&#39;&#39;&#39;MY SANDWICH!!!&#39;&#39;&#39;&quot;,
+		&quot;(Description pending artwork)&quot;,
+		&quot;I take it out, and with tears of joy, begin to eat.&quot;,
+		&quot;\&quot;Meh, wasn&#39;t that good\&quot; I say, tucking the sandwich into the roof with the other lunches.&quot;,
+		&quot;&#39;&#39;&#39;THE END&#39;&#39;&#39;&quot;
+	))
+
+	&lt;script&gt;
+		updateBG(&quot;assets/sandwich/MoldySandwich_v001.png&quot;);
+	&lt;/script&gt;
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;The End&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Mercy ending" tags="" position="2600,375" size="100,100">|clickArea&gt;[
+	|dialogBox&gt;[
+		&lt;div class=&quot;dialogBox&quot;&gt;
+			|text&gt;[]
+		&lt;/div&gt;
+	]
+]
+&lt;div class=&quot;progressIndicator&quot;&gt;
+	|indicator&gt;[]
+&lt;/div&gt;
+
+&lt;div style=&quot;display: none&quot;&gt;
+	(set: _lines to (a:
+		&quot;\&quot;Yes, it- wait what? That was &#39;&#39;YOU???!!&#39;&#39;\&quot; he exclaimed&quot;,
+		&quot;\&quot;Indeed.\&quot;&quot;,
+		&quot;\&quot;We&#39;ve both wronged each other, so let&#39;s agree to share in the responsibility, and leave it at that.\&quot; I replied, my time in the monastery having given me a sense of inner peace.&quot;,
+		&quot;\&quot;Oh screw you dude!\&quot; he shouted, and slammed me onto the glass window, which shattered instantly.&quot;,
+		&quot;\&quot;I&#39;ll be with you soon, little sandwich\&quot; I said as I fell, tears in my eyes.&quot;,
+		&quot;&#39;&#39;&#39;THE END&#39;&#39;&#39;&quot;
+	))
+
+	&lt;script&gt;
+		updateBG(&quot;assets/office.jpg&quot;);
+	&lt;/script&gt;
+
+	(set: _i to 1)
+	(set: _char to 0)
+	(set: _done to false)
+	(set: _blink to false)
+
+	(after: 1s)[
+		(if: not _done)[
+			(live: 30ms)[
+				_done[(stop:)]
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to it + 1)
+					(append: ?text)[(print: _lines&#39;s _i&#39;s _char)]
+				]
+				(else:)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+			]
+
+
+			(click-rerun: ?dialogBox)[
+				(if: _lines&#39;s _i&#39;s length &gt;= 2 and (_lines&#39;s _i&#39;s 1st + _lines&#39;s _i&#39;s 2st) is &quot;[[&quot;)[
+					(if: _i is _lines&#39;s length)[
+						(set: _done to true)
+						(replace: ?clickArea)[
+							&lt;div class=&quot;dialogBox&quot;&gt;
+								|text&gt;[]
+							&lt;/div&gt;
+						]
+					]
+					(replace: ?text)[(print: _lines&#39;s _i)]
+					(set: _char to _lines&#39;s _i&#39;s length)
+				]
+				(else-if: _char &lt; _lines&#39;s _i&#39;s length)[
+					(set: _char to _lines&#39;s _i&#39;s length)
+					(replace: ?text)[(print: _lines&#39;s _i)]
+				]
+				(else:)[
+					(if: _i &lt; _lines&#39;s length)[
+						(set: _i to it + 1)
+						(set: _char to 0)
+						(replace: ?text)[]
+					]
+				]
+			]
+		]
+
+		(live: 1s)[
+			(set: _blink to not _blink)
+			(replace: ?indicator)[
+				(if: _char &gt;= _lines&#39;s _i&#39;s length and not _done and _blink)[⏺]
+				(else:)[]
+			]
+		]
+	]
+    
+	&lt;script&gt;
+		document.title = &quot;The End&quot;;
+		document.addEventListener(&quot;keydown&quot;, function (e) {
+			if (e.code === &quot;Space&quot;) {
+				e.preventDefault();
+
+				const clickable = document.querySelector(&quot;.dialogBox&quot;);
+				if (clickable) {
+					clickable.click();
+				}
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

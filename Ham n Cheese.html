@@ -1817,7 +1817,7 @@ tw-story[tags~="Title"] tw-link {
 &lt;div style=&quot;display: none&quot;&gt;
 	(set: _lines to &quot;&quot;)
 	(if: $training is &quot;bow&quot;)[
-		`(set: $gotAway to true)
+		(set: $gotAway to true)
 		(set: _lines to (a:
 			&quot;After dealing with the parents, the sister is presenting an issue.&quot;,
 			&quot;She&#39;s gotten wise, and hidden herself at home.&quot;,
@@ -2232,6 +2232,7 @@ tw-story[tags~="Title"] tw-link {
 &lt;/div&gt;
 
 &lt;div style=&quot;display: none&quot;&gt;
+	(forget-visits: -1)
 	(set: _lines to (a:
 		&quot;Tracking Samuel down was easy.&quot;,
 		&quot;He stayed in the same rut his whole life, and never amounted to anything.&quot;,

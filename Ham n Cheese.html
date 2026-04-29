@@ -417,7 +417,7 @@ tw-story[tags~="Title"] tw-link {
 	))
     
     &lt;script&gt;
-		updateBG(&quot;assets/office.jpg&quot;);
+		updateBG(&quot;assets/Training/Weapon_options.png&quot;);
 	&lt;/script&gt;
 
 	(set: _i to 1)
@@ -531,7 +531,7 @@ tw-story[tags~="Title"] tw-link {
 	))
     
     &lt;script&gt;
-		updateBG(&quot;assets/office.jpg&quot;);
+		updateBG(&quot;assets/Training/Bow_training.png&quot;);
 	&lt;/script&gt;
 
 	(set: _i to 1)
@@ -645,7 +645,7 @@ tw-story[tags~="Title"] tw-link {
 	))
     
     &lt;script&gt;
-		updateBG(&quot;assets/office.jpg&quot;);
+		updateBG(&quot;assets/Training/Sword_training.png&quot;);
 	&lt;/script&gt;
 
 	(set: _i to 1)
@@ -759,7 +759,7 @@ tw-story[tags~="Title"] tw-link {
 	))
     
     &lt;script&gt;
-		updateBG(&quot;assets/office.jpg&quot;);
+		updateBG(&quot;assets/Training/Spear_training.png&quot;);
 	&lt;/script&gt;
 
 	(set: _i to 1)
@@ -986,7 +986,7 @@ tw-story[tags~="Title"] tw-link {
 	))
     
     &lt;script&gt;
-		updateBG(&quot;assets/office.jpg&quot;);
+		updateBG(&quot;assets/city.png&quot;);
 	&lt;/script&gt;
 
 	(set: _i to 1)
@@ -1218,7 +1218,7 @@ tw-story[tags~="Title"] tw-link {
 	))
 
 	&lt;script&gt;
-		updateBG(&quot;assets/office.jpg&quot;);
+		updateBG(&quot;assets/kills/MotherKill_v001.png&quot;);
 	&lt;/script&gt;
 
 	(set: _i to 1)
@@ -1460,7 +1460,7 @@ tw-story[tags~="Title"] tw-link {
 	]
 
 	&lt;script&gt;
-		updateBG(&quot;assets/office.jpg&quot;);
+		updateBG(&quot;assets/kills/MotherKill_v001.png&quot;);
 	&lt;/script&gt;
 
 	(set: _i to 1)
@@ -1584,7 +1584,7 @@ tw-story[tags~="Title"] tw-link {
 	]
 
 	&lt;script&gt;
-		updateBG(&quot;assets/office.jpg&quot;);
+		updateBG(&quot;assets/kills/SisterKill_v001.png&quot;);
 	&lt;/script&gt;
 
 	(set: _i to 1)
@@ -2129,7 +2129,7 @@ tw-story[tags~="Title"] tw-link {
 	]
 
 	&lt;script&gt;
-		updateBG(&quot;assets/kills/FatherKill_v001.png&quot;);
+		updateBG(&quot;assets/.png&quot;);
 	&lt;/script&gt;
 
 	(set: _i to 1)
@@ -2362,7 +2362,7 @@ tw-story[tags~="Title"] tw-link {
 			&quot;[[Sandwich was never stolen ending&lt;-I take a stroll to the fridge, for old time&#39;s sake]]&quot;
 		))
 	]
-	(if: $gotAway is false)[
+	(else-if: $gotAway is false)[
 		(set: _lines to (a:
 			&quot;\&quot;Hi there, can I... help you?\&quot; he said, shit eating grin present in his mind no doubt.&quot;,
 			&quot;\&quot;You have something of mine\&quot; I replied&quot;,
@@ -2380,10 +2380,17 @@ tw-story[tags~="Title"] tw-link {
 		))
 	]
 
-	&lt;script&gt;
-		updateBG(&quot;assets/office.jpg&quot;);
-	&lt;/script&gt;
-
+	(if: $gotAway is true)[
+		&lt;script&gt;
+			updateBG(&quot;assets/kills/Samuel_2_v001.png&quot;);
+		&lt;/script&gt;
+	]
+	(else-if: $gotAway is false)[
+		&lt;script&gt;
+			updateBG(&quot;assets/kills/Samuel_1_v001.png&quot;);
+		&lt;/script&gt;
+	]
+	
 	(set: _i to 1)
 	(set: _char to 0)
 	(set: _done to false)

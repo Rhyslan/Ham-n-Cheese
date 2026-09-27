@@ -11,6 +11,8 @@ The story follows a man who's sandwich was stolen at work and his revenge on the
 ## Getting Started
 ### Requirements
 - A modern web browser
+- [Twine](https://twinery.org/) (For editing the project)
+
 
 ### Installation
 #### Github Pages
